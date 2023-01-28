@@ -1,0 +1,29 @@
+version: '3.5'
+
+networks:
+  communicator_api:
+    external: false
+
+services:
+
+  pg-communicator_api-localhost:
+    image: "postgres:14.2"
+    container_name: pg-communicator_api-localhost
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=communicator_api
+      - POSTGRES_PASSWORD=communicator_api
+      - POSTGRES_DB=communicator_api
+      - DEBUG=True
+    restart: always
+    networks:
+      - communicator_api
+
+  redis-communicator_api-localhost:
+    image: "redis:latest"
+    container_name: redis-communicator_api-localhost
+    ports:
+      - 6379:6379
+    networks:
+      - communicator_api
