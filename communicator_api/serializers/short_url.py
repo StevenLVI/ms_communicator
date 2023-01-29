@@ -13,7 +13,7 @@ class GetSUrlSerializer(serializers.Serializer):
 
 
 class ShortUrlSerializer(serializers.ModelSerializer):
-    status = serializers.BooleanField(default=True, required=False)
+    active = serializers.BooleanField(default=True, required=False)
 
     class Meta:
         model = ShortUrl

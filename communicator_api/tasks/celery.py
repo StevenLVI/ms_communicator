@@ -15,9 +15,9 @@ app.config_from_object('django.conf:settings', namespace='CELERY')
 app.conf.timezone = 'America/Bogota'
 
 app.conf.beat_schedule = {
-    'test_beat_periodic': {
-        'task': 'test_beat',
-        'schedule': crontab(hour='*', minute='*', day_of_week='mon-fri'),
+    'worker_periodic': {
+        'task': 'deactive_short_url_date',
+        'schedule': crontab(hour='23', minute='59', day_of_week='*'),
         'args': ()
     },
 }
