@@ -8,7 +8,12 @@ class GetShortUrlSerializer(serializers.Serializer):
     short_url = serializers.CharField()
 
 
+class GetSUrlSerializer(serializers.Serializer):
+    long_url = serializers.CharField()
+
+
 class ShortUrlSerializer(serializers.ModelSerializer):
+    status = serializers.BooleanField(default=True, required=False)
 
     class Meta:
         model = ShortUrl
