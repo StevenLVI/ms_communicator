@@ -2,4 +2,4 @@ cd ../devops && docker-compose -f localhost.yml down && docker-compose -f localh
 sleep 2
 python ../manage.py makemigrations && python ../manage.py migrate
 sleep 1
-python ../manage.py runserver
+python ../manage.py runserver 0:8001

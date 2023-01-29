@@ -10,7 +10,7 @@ services:
     image: "postgres:14.2"
     container_name: pg-communicator_api-testing
     ports:
-      - "5432:5432"
+      - "5418:5432"
     environment:
       - POSTGRES_USER=communicator_api
       - POSTGRES_PASSWORD=communicator_api
