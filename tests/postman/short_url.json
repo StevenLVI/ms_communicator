@@ -1,0 +1,266 @@
+{
+	"info": {
+		"_postman_id": "628fe546-6ba5-42bb-89a1-03aeaceae07e",
+		"name": "Communicator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19456853"
+	},
+	"item": [
+		{
+			"name": "List short urls",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api}}/v1/short_url/",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"v1",
+						"short_url",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create short url",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is [201]\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([201]);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 500ms\", () => {",
+							"  pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"",
+							"const arr = pm.response.json().short_url.split('/');",
+							"pm.environment.set(\"hash_id\", arr[1])",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "long_url",
+							"value": "{{$randomUrl}}",
+							"type": "text"
+						},
+						{
+							"key": "type_url",
+							"value": "{{random_type_url}}",
+							"type": "text"
+						},
+						{
+							"key": "expiration_date",
+							"value": "2023-01-30",
+							"description": "formato: YYYY-MM-DD",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{api}}/v1/short_url/",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"v1",
+						"short_url",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Redirect short urls",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is [200]\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200]);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 500ms\", () => {",
+							"  pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api}}/v1/short_url/{{hash_id}}/redirect/",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"v1",
+						"short_url",
+						"{{hash_id}}",
+						"redirect",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deactivate short urls",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is [200]\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200]);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 500ms\", () => {",
+							"  pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api}}/v1/short_url/{{hash_id}}/deactivate/",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"v1",
+						"short_url",
+						"{{hash_id}}",
+						"deactivate",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Activate short urls",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is [200]\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200]);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 500ms\", () => {",
+							"  pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api}}/v1/short_url/{{hash_id}}/activate/",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"v1",
+						"short_url",
+						"{{hash_id}}",
+						"activate",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete short urls",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is [204]\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([204]);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 500ms\", () => {",
+							"  pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{api}}/v1/short_url/{{hash_id}}/",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"v1",
+						"short_url",
+						"{{hash_id}}",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"// Random type faq",
+					"var typeUrlArray = ['GENERIC','UNIQUE'];",
+					"var randomNumber = Math.floor(Math.random()*typeUrlArray.length);",
+					"pm.environment.set(\"random_type_url\",typeUrlArray[randomNumber]);",
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
