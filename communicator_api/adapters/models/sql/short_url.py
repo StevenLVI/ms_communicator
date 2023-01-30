@@ -9,7 +9,6 @@ TYPE_URL = (
 
 class ShortUrl(BaseModel):
     id = models.AutoField(primary_key=True)
-    status = models.BooleanField(default=True)
     hash_id = models.CharField(max_length=60, null=True)  # Hash encontrado al final del short_url -> meli.com/3aE4F
     long_url = models.CharField(max_length=250, null=False)
     short_url = models.CharField(max_length=60, null=True)
