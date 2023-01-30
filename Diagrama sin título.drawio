@@ -1,1 +1,96 @@
-<mxfile host="app.diagrams.net" modified="2023-01-30T17:24:52.648Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" version="20.8.13" etag="cKIGH1zIRAvFpdKu9ob6" type="github"><diagram name="Página-1" id="a-mU8MlhzVke0ZFMQWJk">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2023-01-30T17:38:57.650Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" etag="b1kCpinaOSf-K05ezVo9" version="20.8.13" type="github">
+  <diagram name="Página-1" id="a-mU8MlhzVke0ZFMQWJk">
+    <mxGraphModel dx="1434" dy="686" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="w5oELpaYvZhLUmoTuhMV-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="w5oELpaYvZhLUmoTuhMV-1" target="w5oELpaYvZhLUmoTuhMV-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="w5oELpaYvZhLUmoTuhMV-4" value="HTTP REQUEST(POST)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="w5oELpaYvZhLUmoTuhMV-3">
+          <mxGeometry x="-0.1579" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="w5oELpaYvZhLUmoTuhMV-1" value="usuario ingresa url" style="html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="100" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="w5oELpaYvZhLUmoTuhMV-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="w5oELpaYvZhLUmoTuhMV-2" target="w5oELpaYvZhLUmoTuhMV-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="w5oELpaYvZhLUmoTuhMV-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="w5oELpaYvZhLUmoTuhMV-2" target="w5oELpaYvZhLUmoTuhMV-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="w5oELpaYvZhLUmoTuhMV-2" value="Codificar url en un hash" style="html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="100" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="w5oELpaYvZhLUmoTuhMV-5" value="/v1/short_url/" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="1">
+          <mxGeometry x="250" y="90" width="80" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="w5oELpaYvZhLUmoTuhMV-6" value="url acortada con hash" style="html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="210" width="135" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="w5oELpaYvZhLUmoTuhMV-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="w5oELpaYvZhLUmoTuhMV-7" target="w5oELpaYvZhLUmoTuhMV-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="560" y="300" />
+              <mxPoint x="560" y="150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="w5oELpaYvZhLUmoTuhMV-7" value="Registro de url y hash&lt;br&gt;&amp;nbsp;codificado" style="html=1;" vertex="1" parent="1">
+          <mxGeometry x="455" y="280" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="w5oELpaYvZhLUmoTuhMV-12" value="Usuario ingresa&lt;br&gt;&amp;nbsp;url con hash" style="html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="430" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="w5oELpaYvZhLUmoTuhMV-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="w5oELpaYvZhLUmoTuhMV-13" target="w5oELpaYvZhLUmoTuhMV-16">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="480" />
+              <mxPoint x="490" y="610" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="w5oELpaYvZhLUmoTuhMV-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="w5oELpaYvZhLUmoTuhMV-13" target="w5oELpaYvZhLUmoTuhMV-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="w5oELpaYvZhLUmoTuhMV-13" value="Consultar url &lt;br&gt;correspondiente al hash" style="html=1;" vertex="1" parent="1">
+          <mxGeometry x="455" y="430" width="135" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="w5oELpaYvZhLUmoTuhMV-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="w5oELpaYvZhLUmoTuhMV-12" target="w5oELpaYvZhLUmoTuhMV-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="180" y="454.5" as="sourcePoint" />
+            <mxPoint x="460" y="454.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="w5oELpaYvZhLUmoTuhMV-15" value="HTTP REQUEST(GET)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="w5oELpaYvZhLUmoTuhMV-14">
+          <mxGeometry x="-0.1579" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="w5oELpaYvZhLUmoTuhMV-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="w5oELpaYvZhLUmoTuhMV-16" target="w5oELpaYvZhLUmoTuhMV-13">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="560" y="610" />
+              <mxPoint x="560" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="w5oELpaYvZhLUmoTuhMV-16" value="Consultar url en BD" style="html=1;" vertex="1" parent="1">
+          <mxGeometry x="452.5" y="610" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="w5oELpaYvZhLUmoTuhMV-19" value="url real" style="html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="570" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="w5oELpaYvZhLUmoTuhMV-22" value="&lt;span style=&quot;color: var(--base-color-brand); font-family: Inter, system-ui, -apple-system, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, Cantarell, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, Helvetica, Arial, sans-serif; text-align: left; background-color: rgb(255, 255, 255);&quot; data-testid=&quot;resolvedVariable&quot; spellcheck=&quot;false&quot; class=&quot;resolvedVariable&quot;&gt;&lt;/span&gt;&lt;b&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Inter, system-ui, -apple-system, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, Cantarell, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, Helvetica, Arial, sans-serif; text-align: left; background-color: rgb(255, 255, 255);&quot; data-offset-key=&quot;ck1gt-1-0&quot;&gt;&lt;span data-text=&quot;true&quot;&gt;/v1/short_url/&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: var(--base-color-brand); font-family: Inter, system-ui, -apple-system, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, Cantarell, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, Helvetica, Arial, sans-serif; text-align: left; background-color: rgb(255, 255, 255);&quot; data-testid=&quot;resolvedVariable&quot; spellcheck=&quot;false&quot; class=&quot;resolvedVariable&quot;&gt;&lt;span data-offset-key=&quot;ck1gt-2-0&quot;&gt;{{hash_id}}&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Inter, system-ui, -apple-system, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, Cantarell, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, Helvetica, Arial, sans-serif; text-align: left; background-color: rgb(255, 255, 255);&quot; data-offset-key=&quot;ck1gt-3-0&quot;&gt;&lt;span data-text=&quot;true&quot;&gt;/redirect/&lt;/span&gt;&lt;/span&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="185" y="425" width="230" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
