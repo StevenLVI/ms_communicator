@@ -6,9 +6,9 @@ import { FormData } from 'https://jslib.k6.io/formdata/0.0.2/index.js';
 
 export const options = {
     scenarios: {
-        get_nps: {
+        get_short_url: {
             executor: 'constant-arrival-rate',
-            exec: 'get_nps',
+            exec: 'get_short_url',
             preAllocatedVUs: 100, // Usuarios concurrentes
             maxVUs: 10000, // Usuarios maximos
             timeUnit: '1s', // Cada cuanto se va hacer el pico de iteraciones
@@ -18,11 +18,11 @@ export const options = {
     },
 };
 
-export function post_nps () {
+export function post_short_url () {
     const payload = new FormData();
     payload.append('long_url', 'Lorem');
     payload.append('type_url', 'LANDING');
-    payload.append('expiration_date', '18');
+    payload.append('expiration_date', '2022-01-31');
 
     const headers = {
         headers: { 'Content-Type': 'multipart/form-data; boundary=' + payload.boundary },
@@ -34,9 +34,9 @@ export function post_nps () {
     });
 }
 
-export function get_nps () {
+export function get_short_url () {
 
-    const res = http.get('http://127.0.0.1:80/v1/short_url/8M2vM/redirect/');
+    const res = http.get('http://127.0.0.1:80/v1/short_url/yB5xL/redirect/');
     check(res, {
         'Get status is 200': (r) => res.status === 200,
         'Get Transaction time ok': (r) => res.timings.duration < 1000,

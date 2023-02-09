@@ -2,9 +2,10 @@ from rest_framework import viewsets, mixins, status
 from rest_framework.response import Response
 from rest_framework.decorators import action
 from rest_framework.generics import get_object_or_404
+from django.shortcuts import redirect
 
 from communicator_api.adapters.models.sql.short_url import ShortUrl
-from communicator_api.serializers.short_url import ShortUrlSerializer, GetShortUrlSerializer, GetSUrlSerializer
+from communicator_api.serializers.short_url import ShortUrlSerializer, GetShortUrlSerializer
 from communicator_api.tasks.worker.short_url import url_deactive, url_times_clicked
 
 
@@ -63,4 +64,4 @@ class ShortUrlViewSet(mixins.ListModelMixin,
             url_times_clicked.delay(instance.id)
         elif instance.type_url == "UNIQUE":
             url_deactive.delay(instance.id)
-        return Response(GetSUrlSerializer(instance).data, status=status.HTTP_200_OK)
+        return redirect(instance.long_url)
