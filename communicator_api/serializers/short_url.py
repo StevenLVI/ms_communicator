@@ -14,6 +14,7 @@ class GetSUrlSerializer(serializers.Serializer):
 
 class ShortUrlSerializer(serializers.ModelSerializer):
     active = serializers.BooleanField(default=True, required=False)
+    long_url = serializers.URLField()
 
     class Meta:
         model = ShortUrl
